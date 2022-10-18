@@ -18,12 +18,15 @@ function onAddBox() {
   onCreateBoxes(amount)
 }
 
+let boxSize = 30;
+
 function onCreateBoxes(amount) {
   for (let i = 0; i < amount; i += 1){
+    boxSize += 10
     let newBox = document.createElement('div')
     newBox.style.backgroundColor = getRandomHexColor();
-    newBox.style.width = `${30 + i * 10}px`
-    newBox.style.height = `${30 + i * 10}px`
+    newBox.style.width = `${boxSize}px`
+    newBox.style.height = `${boxSize}px`
     newBox.style.marginTop = '20px'
     boxesEl.append(newBox)
   }
